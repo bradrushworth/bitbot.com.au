@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11"><title>Open-Source | BitBot Software</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="http://www.bitbot.com.au/wp-content/themes/coffeebreak/style.css" media="screen"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-12687515-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-12687515-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script><link rel="stylesheet" id="wp-block-library-css" href="http://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,js,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/PLACEHOLDER.wpsho","hash_tracking":"false"};
+/* ]]> */
+</script><script type="text/javascript" src="http://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="http://www.bitbot.com.au/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="http://www.bitbot.com.au/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="http://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js"></script><script type="text/javascript" src="http://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js"></script><link href="http://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
+a { color: #00A54F; }
+</style><link href="http://www.bitbot.com.au/wp-content/themes/coffeebreak/functions/css/shortcodes.css" rel="stylesheet" type="text/css"><link href="http://www.bitbot.com.au/wp-content/themes/coffeebreak/custom.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			jQuery(window).load(function(){
+				
+				if ( jQuery( '#slides .slide' ).length > 1 && jQuery( '#slides .slide' ).length > 0 ) {		
+					jQuery('#slides').slides({
+						container: 'slides_container',
+						preload: true,
+						preloadImage: 'http://www.bitbot.com.au/wp-content/themes/coffeebreak/images/loading.png',
+									
+						autoHeight: true,
+												effect: 'slide',
+									
+						hoverPause: true,
+																		play: 10000,
+									
+						slideSpeed: 600,
+						fadeSpeed: 600,
+						crossfade: false,
+						generateNextPrev: false,
+						generatePagination: false
+					});
+				} else {
+					jQuery( '#slides .slides_container' ).fadeIn();
+				}
+				
+			});
+		//-->!]]>
+		</script><link rel="icon" href="http://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3-150x150.jpg" sizes="32x32"><link rel="icon" href="http://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg" sizes="192x192"><link rel="apple-touch-icon" href="http://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg"><meta name="msapplication-TileImage" content="http://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg"></head><body class="archive category category-open-source category-18 unknown alt-style-chrome">
+
+<div id="wrap">
+    <div id="top">
+    	<div class="content">
+        
+            <div id="header">
+            
+            	<div id="logo">
+            
+				                    <a href="http://www.bitbot.com.au" title="Tailored computer systems to streamline your business">
+                        <img class="logo" src="http://www.bitbot.com.au/wp-content/uploads/2020/04/Wordpress-Try-2.png" alt="BitBot Software"></a>
+                 
+                
+                                    <h1 class="site-title"><a href="http://www.bitbot.com.au">BitBot Software</a></h1>
+                                    <span class="site-description">Tailored computer systems to streamline your business</span>
+                    
+                </div>
+             
+                <div id="nav">
+                    <ul id="menu-bitbot" class="menu"><li id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-500"><a href="http://www.bitbot.com.au/">Home</a></li>
+<li id="menu-item-515" class="menu-item menu-item-type-taxonomy menu-item-object-category current-category-ancestor current-menu-ancestor current-menu-parent current-category-parent menu-item-has-children menu-item-515"><a href="http://www.bitbot.com.au/topics/articles/">Articles</a>
+<ul class="sub-menu"><li id="menu-item-516" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-516"><a href="http://www.bitbot.com.au/topics/articles/bitbot-news/">BitBot News</a></li>
+	<li id="menu-item-517" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-517"><a href="http://www.bitbot.com.au/topics/articles/open-source/" aria-current="page">Open-Source</a></li>
+	<li id="menu-item-518" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-518"><a href="http://www.bitbot.com.au/topics/articles/programming/">Programming</a></li>
+	<li id="menu-item-519" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-519"><a href="http://www.bitbot.com.au/topics/articles/servers/">Servers</a></li>
+</ul></li>
+<li id="menu-item-501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-501"><a href="http://www.bitbot.com.au/services/">Services</a>
+<ul class="sub-menu"><li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-502"><a href="http://www.bitbot.com.au/services/consulting/">Consulting</a>
+	<ul class="sub-menu"><li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="http://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
+	</ul></li>
+	<li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-504"><a href="http://www.bitbot.com.au/services/server-and-network-support/">Server and Network Support</a>
+	<ul class="sub-menu"><li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="http://www.bitbot.com.au/services/server-and-network-support/managed-services/">Managed Services</a></li>
+		<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="http://www.bitbot.com.au/services/server-and-network-support/technical-information/">Technical Information</a></li>
+	</ul></li>
+	<li id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-507"><a href="http://www.bitbot.com.au/services/software-development/">Software Development</a>
+	<ul class="sub-menu"><li id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508"><a href="http://www.bitbot.com.au/services/software-development/portfolio/">Software Portfolio</a></li>
+		<li id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509"><a href="http://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
+	</ul></li>
+</ul></li>
+<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="http://www.bitbot.com.au/about/">About Us</a>
+<ul class="sub-menu"><li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511"><a href="http://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
+	<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="http://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+</ul></li>
+<li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="http://www.bitbot.com.au/contact-us/">Contact Us</a></li>
+</ul></div>
+                
+                                                
+            </div>
+            
+        </div>
+    </div>
+       
+	<div id="featured">
+        <div id="page-title" class="content">
+			<h2>Archive for 'Open-Source'</h2>
+                        <a class="subscribe" href="http://www.bitbot.com.au/feed/">
+                <img src="http://www.bitbot.com.au/wp-content/themes/coffeebreak/images/ico-rss-48.png" alt="Subscribe"></a>        
+        </div>
+    </div>
+           
+    
+	<div id="main-content" class="archive">           
+    <div class="content">
+		<div class="col-left">
+			<div id="main">
+            
+                                                                                                
+                
+                <div class="post wrap">
+
+                    <h2><a href="http://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/" rel="bookmark" title="Free Hosted Redmine Project Management">Free Hosted Redmine Project Management</a></h2>
+                    <p class="post-details">Posted on 30. Mar, 2010 by <a href="http://www.bitbot.com.au/author/brad/" title="Posts by Brad Rushworth" rel="author">Brad Rushworth</a> in <a href="http://www.bitbot.com.au/topics/articles/bitbot-news/" rel="category tag">BitBot News</a>, <a href="http://www.bitbot.com.au/topics/articles/open-source/" rel="category tag">Open-Source</a></p>
+                    
+	                <div class="entry">
+							                                        
+	                    <p>BitBot Software is proud to announce the opening of our new free service called Hosted Redmine. Redmine is free and open source project management software. It is ideal for software development projects, but also well suited to general task tracking and small business management. Redmine is a worthy alternative to Jira, FogBugz, Trac and Bugzilla. […]</p>
+	                </div>
+	    			<div class="fix"></div>
+	    			
+                		                    <span class="read-more"><a href="http://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/" title="Continue Reading →">Continue Reading →</a></span>
+                    
+                </div>
+                
+                                                    
+			                                                                        
+                
+                <div class="post wrap">
+
+                    <h2><a href="http://www.bitbot.com.au/2010/03/make-the-move/" rel="bookmark" title="Make The Move!">Make The Move!</a></h2>
+                    <p class="post-details">Posted on 26. Mar, 2010 by <a href="http://www.bitbot.com.au/author/brad/" title="Posts by Brad Rushworth" rel="author">Brad Rushworth</a> in <a href="http://www.bitbot.com.au/topics/articles/open-source/" rel="category tag">Open-Source</a></p>
+                    
+	                <div class="entry">
+							                                        
+	                    <p>BitBot Software uses Linux and many other FOSS software packages daily. In fact, we have made it our whole business. I encourage you to consider what Open-Source Software can do for you and your business. What is FOSS? FOSS stands for ‘Free and Open Source Software’. ‘Free’ in this context refers to ‘freedom’ (as in […]</p>
+	                </div>
+	    			<div class="fix"></div>
+	    			
+                		                    <span class="read-more"><a href="http://www.bitbot.com.au/2010/03/make-the-move/" title="Continue Reading →">Continue Reading →</a></span>
+                    
+                </div>
+                
+                                                    
+			                                                                        
+                
+                <div class="post wrap">
+
+                    <h2><a href="http://www.bitbot.com.au/2010/02/software-freedom/" rel="bookmark" title="Software Freedom">Software Freedom</a></h2>
+                    <p class="post-details">Posted on 24. Feb, 2010 by <a href="http://www.bitbot.com.au/author/brad/" title="Posts by Brad Rushworth" rel="author">Brad Rushworth</a> in <a href="http://www.bitbot.com.au/topics/articles/open-source/" rel="category tag">Open-Source</a></p>
+                    
+	                <div class="entry">
+							                                        
+	                    <p>Sometimes I feel as though our rights are slowly being diminished. People are being sued globally for copyright infringement because content producers seem to be incapable of providing their works in the technological formats and sales channels desired by consumers. These dinosaurs will fight hard to resist any disruptive innovation (as has always been the […]</p>
+	                </div>
+	    			<div class="fix"></div>
+	    			
+                		                    <span class="read-more"><a href="http://www.bitbot.com.au/2010/02/software-freedom/" title="Continue Reading →">Continue Reading →</a></span>
+                    
+                </div>
+                
+                                                    
+			  
+        
+                <div class="more_entries">
+                                        <div class="alignleft"></div>
+                    <div class="alignright"></div>
+                    <br class="fix"></div>		
+                
+            </div>
+        </div>
+
+        
+<div id="sidebar" class="col-right">
+
+		
+	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>		<ul><li class="page_item page-item-130 page_item_has_children"><a href="http://www.bitbot.com.au/services/">Services</a>
+<ul class="children"><li class="page_item page-item-28 page_item_has_children"><a href="http://www.bitbot.com.au/services/consulting/">Consulting</a>
+	<ul class="children"><li class="page_item page-item-212"><a href="http://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
+	</ul></li>
+	<li class="page_item page-item-14 page_item_has_children"><a href="http://www.bitbot.com.au/services/server-and-network-support/">Server and Network Support</a>
+	<ul class="children"><li class="page_item page-item-280"><a href="http://www.bitbot.com.au/services/server-and-network-support/managed-services/">Managed Services</a></li>
+		<li class="page_item page-item-274"><a href="http://www.bitbot.com.au/services/server-and-network-support/technical-information/">Technical Information</a></li>
+	</ul></li>
+	<li class="page_item page-item-16 page_item_has_children"><a href="http://www.bitbot.com.au/services/software-development/">Software Development</a>
+	<ul class="children"><li class="page_item page-item-299 page_item_has_children"><a href="http://www.bitbot.com.au/services/software-development/portfolio/">Software Portfolio</a>
+		<ul class="children"><li class="page_item page-item-639"><a href="http://www.bitbot.com.au/services/software-development/portfolio/aus-phone-towers-privacy-policy/">Aus Phone Towers Privacy Policy</a></li>
+		</ul></li>
+		<li class="page_item page-item-291"><a href="http://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
+	</ul></li>
+</ul></li>
+<li class="page_item page-item-2 page_item_has_children"><a href="http://www.bitbot.com.au/about/">About Us</a>
+<ul class="children"><li class="page_item page-item-23"><a href="http://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
+	<li class="page_item page-item-20"><a href="http://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+</ul></li>
+<li class="page_item page-item-30"><a href="http://www.bitbot.com.au/contact-us/">Contact Us</a></li>
+		</ul></div>		<div id="recent-posts-2" class="block widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul><li>
+					<a href="http://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/">Free Hosted Redmine Project Management</a>
+									</li>
+											<li>
+					<a href="http://www.bitbot.com.au/2010/03/make-the-move/">Make The Move!</a>
+									</li>
+											<li>
+					<a href="http://www.bitbot.com.au/2010/03/benchmarking-openssl/">Benchmarking OpenSSL on Linux, FreeBSD and Windows</a>
+									</li>
+											<li>
+					<a href="http://www.bitbot.com.au/2010/03/benchmarking-linux-and-freebsd/">Benchmarking Linux and FreeBSD</a>
+									</li>
+											<li>
+					<a href="http://www.bitbot.com.au/2010/02/software-freedom/">Software Freedom</a>
+									</li>
+											<li>
+					<a href="http://www.bitbot.com.au/2010/01/welcome-to-the-new-bitbot-com-au-website/">Welcome to BitBot.com.au!</a>
+									</li>
+					</ul></div><div id="linkcat-2" class="block widget widget_links"><h3>Links</h3>
+	<ul class="xoxo blogroll"><li><a href="http://ask-oss.mq.edu.au/" title="Australian Service for Knowledge of Open Source Software">ASK-OSS</a></li>
+<li><a href="http://brad.bitbot.com.au/" rel="me">Brad Rushworth's Blog</a></li>
+<li><a href="http://twitter.com/bradrushworth">Brad Rushworth's Twitter</a></li>
+<li><a href="http://linux.org.au/">Linux Australia</a></li>
+<li><a href="http://www.newcastlelug.org/">Linux Owners Group In Newcastle</a></li>
+<li><a href="http://softwarefreedomday.org/SoftwareFreedom" title="Software Freedom, underpinning your human rights">Software Freedom Day</a></li>
+
+	</ul></div>
+		           
+	
+</div>
+
+    </div>
+    </div>
+		
+	<div class="fix"></div>
+
+	
+	<div id="footer">
+        <div class="content">
+            <div class="col-left">
+            	<h3></h3>
+                <p>National: 1300 BIT BOT (1300 248 268)<br>
+Fax: 02 4017 0682<br>
+Email: sales@bitbot.com.au<br></p>
+                <div class="hr"></div>
+                <p>© 2020 BitBot Software. (ABN: 78 131 407 193)<br>
+This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/au/">Creative Commons Attribution-Share Alike 2.5 Australia License</a>.</p>
+                
+            </div>
+            <div class="col-right">
+            	<h3></h3>
+                <p>We are a new, innovative company based in Newcastle NSW Australia. We pride ourselves on being able to expertly meet our customers' needs. We constantly strive to be the best in our local industry. Our services are affordable and contain no hidden costs. We commit ourselves to excellence.</p>
+            </div>
+        </div>
+        <div class="fix"></div>
+	</div>
+	
+	
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12687515-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body></html>
