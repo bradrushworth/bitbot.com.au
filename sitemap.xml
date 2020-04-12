@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.bitbot.com.au/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="4.1.0" -->
-<!-- generated-on="2020-04-12 5:34 AM" -->
+<!-- generated-on="2020-04-12 5:39 AM" -->
 <sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<sitemap>
 		<loc>http://www.bitbot.com.au/sitemap-misc.xml</loc>
 		<lastmod>2020-04-03T10:27:17+00:00</lastmod>
@@ -36,4 +36,4 @@
 		<loc>http://www.bitbot.com.au/sitemap-pt-page-2009-05.xml</loc>
 		<lastmod>2019-11-03T01:36:48+00:00</lastmod>
 	</sitemap>
-</sitemapindex><!-- Request ID: bbc0b37611ad613d821005cb0282100b; Queries for sitemap: 6; Total queries: 17; Seconds: 0; Memory for sitemap: 0MB; Total memory: 4MB -->
+</sitemapindex><!-- Request ID: bfe62f29e0302c4c60aa61017db23680; Queries for sitemap: 6; Total queries: 17; Seconds: 0; Memory for sitemap: 0MB; Total memory: 2MB -->
