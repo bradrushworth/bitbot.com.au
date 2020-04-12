@@ -1,0 +1,25 @@
+<?php
+
+/*---------------------------------------------------------------------------------*/
+/* Input Option: Listing Link Categories */
+/*---------------------------------------------------------------------------------*/
+
+// Input Option: Listing Link Categories
+function DisplayCats($name,$select)
+{
+	$linkcats = array();
+	$linkcats = get_categories('type=post');
+	
+	echo '<p><label for="' . $name .  '_category">Link Category:
+					<select name="' . $name .  '_category" class="wide fat" style="width: 94% !important;">';
+	
+	foreach ( $linkcats as $singlecat ) {
+		
+		if ( $select == $singlecat->cat_name ) { echo '<option value="' . $singlecat->cat_name . '" selected="selected">' . $singlecat->cat_name . '</option>'; }
+			else { echo '<option value="' . $singlecat->cat_name . '">' . $singlecat->cat_name . '</option>'; }
+		
+	}
+	
+	echo '</select></label></p>';
+
+}
