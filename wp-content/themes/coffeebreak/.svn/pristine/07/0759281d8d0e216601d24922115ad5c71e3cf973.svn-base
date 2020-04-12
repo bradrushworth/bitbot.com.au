@@ -1,0 +1,74 @@
+<?php
+
+/*---------------------------------------------------------------------------------*/
+/* Feedburner */
+/*---------------------------------------------------------------------------------*/
+
+class Woo_Feedburner extends WP_Widget {
+
+	function Woo_Feedburner() {
+		$widget_ops = array('description' => 'This is a blank widget.' );
+		parent::WP_Widget(false, __('Woo - Feedburner', 'woothemes' ),$widget_ops);      
+	}
+
+	function widget($args, $instance) { 
+		extract( $args ); 
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Subscribe via E-mail', 'woo themes' ) : $instance['title'] );
+		$id = $instance['id'];
+		$google = $instance['google'];
+		
+
+        echo $before_widget; ?>
+        <?php
+
+			echo $before_title .$title. $after_title;
+		
+		?>
+			
+        <form action="<?php if ($google) { ?>http://feedburner.google.com/fb/a/mailverify<?php } else { ?>http://www.feedburner.com/fb/a/emailverify<?php } ?>" method="post" target="popupwindow" onsubmit="window.open('<?php if ($google) { ?>http://feedburner.google.com/fb/a/mailverify?uri=<?php } else { ?>http://www.feedburner.com/fb/a/emailverifySubmit?feedId=<?php } ?><?php echo $id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+        
+            <input class="field" type="text" name="email" value="<?php _e('Enter your e-mail address', 'woo themes' ); ?>" onfocus="if (this.value == '<?php _e('Enter your e-mail address', 'woo themes' ); ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _e('Enter your e-mail address', 'woo themes' ); ?>';}" />
+            <input type="hidden" value="<?php echo $id; ?>" name="uri"/>
+            <input type="hidden" value="<?php bloginfo('name'); ?>" name="title"/>
+            <input type="hidden" name="loc" value="en_US"/>
+            
+            <input class="button" type="submit" name="submit" value="submit" />
+            
+    	</form>
+            
+		<?php
+		echo $after_widget;
+
+	}
+
+	function update($new_instance, $old_instance) {                
+		return $new_instance;
+	}
+
+	function form($instance) {   
+	     
+		$title = esc_attr($instance['title']);
+		$id = esc_attr($instance['id']);
+		$google = esc_attr($instance['google']);
+
+		?>
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'woo themes' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" class="wide fat" id="<?php echo $this->get_field_id('title'); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Feedburner ID:', 'woo themes' ); ?></label>
+            <input type="text" name="<?php echo $this->get_field_name('id'); ?>" value="<?php echo $id; ?>" class="wide fat" id="<?php echo $this->get_field_id('id'); ?>" />
+        </p>
+       <p>
+	   	   <label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Use Feedburner Google URL?', 'woo themes' ); ?></label>
+	       <input value="1" <?php if($google) echo "checked" ; ?> type="checkbox" name="<?php echo $this->get_field_name('google'); ?>" value="<?php echo $google; ?>" class="" id="<?php echo $this->get_field_id('google'); ?>" />
+
+          
+       </p>
+
+        <?php
+	}
+} 
+
+register_widget('Woo_Feedburner');
