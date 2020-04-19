@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.bitbot.com.au/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="4.1.0" -->
-<!-- generated-on="2020-04-12 12:52 PM" -->
+<!-- generated-on="2020-04-19 9:46 AM" -->
 <sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<sitemap>
 		<loc>https://www.bitbot.com.au/sitemap-misc.xml</loc>
-		<lastmod>2020-04-12T12:22:58+00:00</lastmod>
+		<lastmod>2020-04-19T09:45:01+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.bitbot.com.au/sitemap-tax-category.xml</loc>
-		<lastmod>2020-04-12T12:22:58+00:00</lastmod>
+		<lastmod>2020-04-19T09:45:01+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.bitbot.com.au/sitemap-pt-post-2010-03.xml</loc>
@@ -40,4 +40,4 @@
 		<loc>https://www.bitbot.com.au/sitemap-pt-page-2009-05.xml</loc>
 		<lastmod>2019-11-03T01:36:48+00:00</lastmod>
 	</sitemap>
-</sitemapindex><!-- Request ID: a9623b019c5f08b321b3b28b576eeaa9; Queries for sitemap: 6; Total queries: 23; Seconds: 0.01; Memory for sitemap: 0MB; Total memory: 2MB -->
+</sitemapindex><!-- Request ID: 73a02faf49cb3122700e8cc271971c48; Queries for sitemap: 6; Total queries: 23; Seconds: 0.01; Memory for sitemap: 0MB; Total memory: 2MB -->
