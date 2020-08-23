@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11"><title>Software Portfolio | BitBot Software</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/style.css" media="screen"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
-	var mi_version         = '7.10.4';
+	var mi_version         = '7.12.2';
 	var mi_track_user      = true;
 	var mi_no_track_reason = '';
 	
@@ -20,6 +20,12 @@
 	function __gaTrackerOptout() {
 	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
 	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
 	}
 	
 	if ( mi_track_user ) {
@@ -75,11 +81,11 @@
 			window['__gaTracker'] = __gaTracker;
 					})();
 		}
-</script><link rel="stylesheet" id="wp-block-library-css" href="https://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript">
+</script><link rel="stylesheet" id="wp-block-library-css" href="https://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript" id="monsterinsights-frontend-script-js-extra">
 /* <![CDATA[ */
 var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,js,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/PLACEHOLDER.wpsho","hash_tracking":"false"};
 /* ]]> */
-</script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js"></script><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
+</script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js" id="monsterinsights-frontend-script-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery.js" id="jquery-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js" id="superfish-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js" id="general-js"></script><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
 a { color: #00A54F; }
 </style><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/functions/css/shortcodes.css" rel="stylesheet" type="text/css"><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/custom.css" rel="stylesheet" type="text/css"><script type="text/javascript">
 		<!--//--><![CDATA[//><!--
@@ -152,7 +158,7 @@ a { color: #00A54F; }
 <li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="https://www.bitbot.com.au/about/">About Us</a>
 <ul class="sub-menu"><li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
 	<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
-	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-723"><a href="https://www.bitbot.com.au/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-723"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
 </ul></li>
 <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
 </ul></div>
@@ -183,13 +189,13 @@ a { color: #00A54F; }
 <p>The following is a sample of our work:</p>
 <p><strong>Aus Phone Towers</strong></p>
 <p>BitBot Software developed <a href="https://play.google.com/store/apps/details?id=au.com.bitbot.phonetowers">Aus Phone Towers</a>, a popular Android application with over 10,000 active Australian users. Updated weekly with the latest tower information from the Australian Communications and Media Authority (ACMA), this app presents all you ever wanted to know about your local mobile phone towers in a fun and interactive format.</p>
-<div id="attachment_637" style="width: 179px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-637" src="http://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-169x300.png" alt="" width="169" height="300" class="size-medium wp-image-637" srcset="https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-169x300.png 169w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-768x1365.png 768w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-576x1024.png 576w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812.png 1080w" sizes="(max-width: 169px) 100vw, 169px"><p id="caption-attachment-637" class="wp-caption-text">Have you ever wondered where your nearest mobile phone tower was or what technologies it supports?</p></div>
+<div id="attachment_637" style="width: 179px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-637" loading="lazy" src="http://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-169x300.png" alt="" width="169" height="300" class="size-medium wp-image-637" srcset="https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-169x300.png 169w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-768x1365.png 768w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812-576x1024.png 576w,https://www.bitbot.com.au/wp-content/uploads/2018/10/Screenshot_20171104-124812.png 1080w" sizes="(max-width: 169px) 100vw, 169px"><p id="caption-attachment-637" class="wp-caption-text">Have you ever wondered where your nearest mobile phone tower was or what technologies it supports?</p></div>
 <p><strong>Drover’s Ay-One</strong></p>
 <p>BitBot Software wrote and maintains the Cowtag Order Management System for <a href="http://www.drovers.com.au/">Drover’s Ay-One</a>. This system processes tens of thousands of orders for livestock identification products each year. Their business manufactures products on-demand, with orders received from individuals, businesses and state governments. The software reports manufacturing data daily to the <a href="http://www.dpi.nsw.gov.au/agriculture/livestock/nlis">National Livestock Identification Scheme</a> which is run by the <a href="http://www.mla.com.au/">Meat and Livestock Authority</a>.</p>
-<div id="attachment_302" style="width: 410px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-302" class="size-full wp-image-302" title="Cowtag Web App" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/cowtag-web.png" alt="" width="400" height="285"><p id="caption-attachment-302" class="wp-caption-text">Cowtag Web App</p></div>
+<div id="attachment_302" style="width: 410px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-302" loading="lazy" class="size-full wp-image-302" title="Cowtag Web App" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/cowtag-web.png" alt="" width="400" height="285"><p id="caption-attachment-302" class="wp-caption-text">Cowtag Web App</p></div>
 <p><strong>McLean Automation</strong></p>
 <p>BitBot Software wrote the <a href="http://www.ma1.net.au/camvnet.html">Camvnet</a> application for McLean Automation. Camvnet consists of Internet enabled remote sites surrounded by control & monitoring stations. Stations are linked by short-haul wireless to the common ADSL site access node (the LinkMaster) for web based site management that offers remote control and monitoring via the internet.</p>
-<div id="attachment_301" style="width: 410px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-301" class="size-full wp-image-301" title="Camvnet Graphs" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/camvnet.png" alt="" width="400" height="486"><p id="caption-attachment-301" class="wp-caption-text">Camvnet Graphs</p></div>
+<div id="attachment_301" style="width: 410px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-301" loading="lazy" class="size-full wp-image-301" title="Camvnet Graphs" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/camvnet.png" alt="" width="400" height="486"><p id="caption-attachment-301" class="wp-caption-text">Camvnet Graphs</p></div>
                     
 					
                 </div>
@@ -204,8 +210,8 @@ a { color: #00A54F; }
 <div id="sidebar" class="col-right">
 
 		
-	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>		<ul><li class="page_item page-item-722"><a href="https://www.bitbot.com.au/privacy-policy/">Privacy Policy</a></li>
-<li class="page_item page-item-130 page_item_has_children current_page_ancestor"><a href="https://www.bitbot.com.au/services/">Services</a>
+	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>
+			<ul><li class="page_item page-item-130 page_item_has_children current_page_ancestor"><a href="https://www.bitbot.com.au/services/">Services</a>
 <ul class="children"><li class="page_item page-item-28 page_item_has_children"><a href="https://www.bitbot.com.au/services/consulting/">Consulting</a>
 	<ul class="children"><li class="page_item page-item-212"><a href="https://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
 	</ul></li>
@@ -216,6 +222,7 @@ a { color: #00A54F; }
 	<li class="page_item page-item-16 page_item_has_children current_page_ancestor current_page_parent"><a href="https://www.bitbot.com.au/services/software-development/">Software Development</a>
 	<ul class="children"><li class="page_item page-item-299 page_item_has_children current_page_item"><a href="https://www.bitbot.com.au/services/software-development/portfolio/" aria-current="page">Software Portfolio</a>
 		<ul class="children"><li class="page_item page-item-639"><a href="https://www.bitbot.com.au/services/software-development/portfolio/aus-phone-towers-privacy-policy/">Aus Phone Towers Privacy Policy</a></li>
+			<li class="page_item page-item-783"><a href="https://www.bitbot.com.au/services/software-development/portfolio/banksia-privacy-policy/">Banksia Privacy Policy</a></li>
 		</ul></li>
 		<li class="page_item page-item-291"><a href="https://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
 	</ul></li>
@@ -223,9 +230,13 @@ a { color: #00A54F; }
 <li class="page_item page-item-2 page_item_has_children"><a href="https://www.bitbot.com.au/about/">About Us</a>
 <ul class="children"><li class="page_item page-item-23"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
 	<li class="page_item page-item-20"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+	<li class="page_item page-item-722"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
 </ul></li>
 <li class="page_item page-item-30"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
-		</ul></div>		<div id="recent-posts-2" class="block widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul><li>
+			</ul></div>
+		<div id="recent-posts-2" class="block widget widget_recent_entries">
+		<h3>Recent Posts</h3>
+		<ul><li>
 					<a href="https://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/">Free Hosted Redmine Project Management</a>
 									</li>
 											<li>
