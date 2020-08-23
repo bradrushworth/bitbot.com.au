@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11"><title>Benchmarking OpenSSL on Linux, FreeBSD and Windows | BitBot Software</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/style.css" media="screen"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
-	var mi_version         = '7.10.4';
+	var mi_version         = '7.12.2';
 	var mi_track_user      = true;
 	var mi_no_track_reason = '';
 	
@@ -20,6 +20,12 @@
 	function __gaTrackerOptout() {
 	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
 	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
 	}
 	
 	if ( mi_track_user ) {
@@ -75,11 +81,11 @@
 			window['__gaTracker'] = __gaTracker;
 					})();
 		}
-</script><link rel="stylesheet" id="wp-block-library-css" href="https://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript">
+</script><link rel="stylesheet" id="wp-block-library-css" href="https://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript" id="monsterinsights-frontend-script-js-extra">
 /* <![CDATA[ */
 var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,js,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/PLACEHOLDER.wpsho","hash_tracking":"false"};
 /* ]]> */
-</script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js"></script><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
+</script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js" id="monsterinsights-frontend-script-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery.js" id="jquery-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js" id="superfish-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js" id="general-js"></script><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
 a { color: #00A54F; }
 </style><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/functions/css/shortcodes.css" rel="stylesheet" type="text/css"><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/custom.css" rel="stylesheet" type="text/css"><script type="text/javascript">
 		<!--//--><![CDATA[//><!--
@@ -152,7 +158,7 @@ a { color: #00A54F; }
 <li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="https://www.bitbot.com.au/about/">About Us</a>
 <ul class="sub-menu"><li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
 	<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
-	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-723"><a href="https://www.bitbot.com.au/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-723"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
 </ul></li>
 <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
 </ul></div>
@@ -195,19 +201,19 @@ a { color: #00A54F; }
 </ul><p>I did cheat a little and use different computers for each of the tests, however they are all the same make, model, age and specification. I did this to save time. They are all Dell Optiplex GX280 Pentium 4, 3.2 GHz, 800MHz FSB, 1GB RAM @ 400MHz and Hyper-Threading enabled.</p>
 <p>I tested SHA256, RSA signing and RSA verifying. SHA256 is regularly used for determining if files have changed or been corrupted. RSA is regularly used for securely transferring private keys across networks, such as before an encrypted website request, encrypted emails and financial transactions. Whether you realise it or not, you use these two algorithms everyday.</p>
 <p>Now for the results:</p>
-<p style="text-align: left;"><img class="aligncenter size-full wp-image-236" title="RSA Signing Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/RSA_signs.png" alt="" width="434" height="253">Fedora has excellent results in this test, especially in the lower sized tests. However, Fedora is running a cutting edge version of OpenSSL that gives it the speed advantage. When I downgraded OpenSSL back to 0.9.8, the preformance was fairly equal to Ubuntu. However, this is the tenancy for Fedora, they prefer cutting edge software and quick introduction of new features. Of course, this leads to more bugs and perhaps less stability.</p>
+<p style="text-align: left;"><img loading="lazy" class="aligncenter size-full wp-image-236" title="RSA Signing Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/RSA_signs.png" alt="" width="434" height="253">Fedora has excellent results in this test, especially in the lower sized tests. However, Fedora is running a cutting edge version of OpenSSL that gives it the speed advantage. When I downgraded OpenSSL back to 0.9.8, the preformance was fairly equal to Ubuntu. However, this is the tenancy for Fedora, they prefer cutting edge software and quick introduction of new features. Of course, this leads to more bugs and perhaps less stability.</p>
 <p style="text-align: left;">
 </p><p style="text-align: left;">
-</p><p style="text-align: left;"><img class="aligncenter size-full wp-image-237" title="RSA Verifying Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/RSA_verifies.png" alt="" width="434" height="253">These results are very similar to the Sign test above.</p>
+</p><p style="text-align: left;"><img loading="lazy" class="aligncenter size-full wp-image-237" title="RSA Verifying Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/RSA_verifies.png" alt="" width="434" height="253">These results are very similar to the Sign test above.</p>
 <p style="text-align: left;">
 </p><p style="text-align: left;">
-</p><p style="text-align: left;"><img class="aligncenter size-full wp-image-238" title="SHA256 Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/SHA256.png" alt="" width="434" height="253">Again, Fedora was very fast. However, once I downgraded OpenSSL again, the results were only around 5% better than Ubuntu.</p>
+</p><p style="text-align: left;"><img loading="lazy" class="aligncenter size-full wp-image-238" title="SHA256 Speed" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/SHA256.png" alt="" width="434" height="253">Again, Fedora was very fast. However, once I downgraded OpenSSL again, the results were only around 5% better than Ubuntu.</p>
 <p style="text-align: left;">I couldn’t get results for Windows on this test, it must have a bug in the OpenSSL port to Windows.</p>
 <p style="text-align: left;">Mint is based on Ubuntu, so these similar results aren’t surprising.</p>
 <p style="text-align: left;">
 </p><h2 style="text-align: left;">Experiment 2</h2>
 <p>After completing these tests, I had an opportunity to test out 64-bit FreeBSD versus 64-bit Ubuntu. The hardware was kept constant this time. These tests were run on a modern HP Elitebook 6930p laptop with Core2 Duo 2.4GHz and 2GB RAM.</p>
-<p><img class="aligncenter size-full wp-image-244" title="SHA256 64-bit" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/SHA256_64bit.png" alt="" width="434" height="253">As you can see, Ubuntu outperformed FreeBSD by around 10%.</p>
+<p><img loading="lazy" class="aligncenter size-full wp-image-244" title="SHA256 64-bit" src="http://www.bitbot.com.au/wp-content/uploads/2010/03/SHA256_64bit.png" alt="" width="434" height="253">As you can see, Ubuntu outperformed FreeBSD by around 10%.</p>
 <h2>Conclusions</h2>
 <p>Don’t get too caught up with these test results, they aren’t that important when deciding which OS to use. They are testing a specific part of the system only. That said, Linux does appear to be somewhat more efficient than FreeBSD and Microsoft Windows in these CPU intensive tests. I didn’t test OpenSolaris here, however I believe it is another fine choice that performs well.</p>
 <p>If you need a powerhouse OS to build the next Google, Linux looks like a fine choice.</p>
@@ -300,8 +306,8 @@ a { color: #00A54F; }
 <div id="sidebar" class="col-right">
 
 		
-	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>		<ul><li class="page_item page-item-722"><a href="https://www.bitbot.com.au/privacy-policy/">Privacy Policy</a></li>
-<li class="page_item page-item-130 page_item_has_children"><a href="https://www.bitbot.com.au/services/">Services</a>
+	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>
+			<ul><li class="page_item page-item-130 page_item_has_children"><a href="https://www.bitbot.com.au/services/">Services</a>
 <ul class="children"><li class="page_item page-item-28 page_item_has_children"><a href="https://www.bitbot.com.au/services/consulting/">Consulting</a>
 	<ul class="children"><li class="page_item page-item-212"><a href="https://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
 	</ul></li>
@@ -312,6 +318,7 @@ a { color: #00A54F; }
 	<li class="page_item page-item-16 page_item_has_children"><a href="https://www.bitbot.com.au/services/software-development/">Software Development</a>
 	<ul class="children"><li class="page_item page-item-299 page_item_has_children"><a href="https://www.bitbot.com.au/services/software-development/portfolio/">Software Portfolio</a>
 		<ul class="children"><li class="page_item page-item-639"><a href="https://www.bitbot.com.au/services/software-development/portfolio/aus-phone-towers-privacy-policy/">Aus Phone Towers Privacy Policy</a></li>
+			<li class="page_item page-item-783"><a href="https://www.bitbot.com.au/services/software-development/portfolio/banksia-privacy-policy/">Banksia Privacy Policy</a></li>
 		</ul></li>
 		<li class="page_item page-item-291"><a href="https://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
 	</ul></li>
@@ -319,9 +326,13 @@ a { color: #00A54F; }
 <li class="page_item page-item-2 page_item_has_children"><a href="https://www.bitbot.com.au/about/">About Us</a>
 <ul class="children"><li class="page_item page-item-23"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
 	<li class="page_item page-item-20"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+	<li class="page_item page-item-722"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
 </ul></li>
 <li class="page_item page-item-30"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
-		</ul></div>		<div id="recent-posts-2" class="block widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul><li>
+			</ul></div>
+		<div id="recent-posts-2" class="block widget widget_recent_entries">
+		<h3>Recent Posts</h3>
+		<ul><li>
 					<a href="https://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/">Free Hosted Redmine Project Management</a>
 									</li>
 											<li>
