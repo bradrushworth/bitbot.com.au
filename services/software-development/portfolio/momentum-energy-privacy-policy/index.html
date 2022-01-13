@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11"><title>Momentum Energy Privacy Policy | BitBot Software</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/style.css" media="screen"><meta name="robots" content="max-image-preview:large"><link rel="dns-prefetch" href="//s.w.org"><script src="//www.googletagmanager.com/gtag/js?id=UA-12687515-1" type="text/javascript" data-cfasync="false" data-wpfc-render="false" async></script><script type="text/javascript" data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '8.3.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-12687515-1',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+
+						if ( type === 'event' ) {
+							
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer( type, name, parameters );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+															__gtagTracker( 'config', 'UA-12687515-1', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;											(function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						})();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script><link rel="stylesheet" id="wp-block-library-css" href="https://www.bitbot.com.au/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><script type="text/javascript" id="monsterinsights-frontend-script-js-extra">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,js,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/PLACEHOLDER.wpsho","hash_tracking":"false","ua":"UA-12687515-1","v4_id":""};
+/* ]]> */
+</script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js" id="monsterinsights-frontend-script-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/superfish.js" id="superfish-js"></script><script type="text/javascript" src="https://www.bitbot.com.au/wp-content/themes/coffeebreak/includes/js/general.js" id="general-js"></script><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/styles/chrome.css" rel="stylesheet" type="text/css"><style type="text/css">
+a { color: #00A54F; }
+</style><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/functions/css/shortcodes.css" rel="stylesheet" type="text/css"><link href="https://www.bitbot.com.au/wp-content/themes/coffeebreak/custom.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			jQuery(window).load(function(){
+				
+				if ( jQuery( '#slides .slide' ).length > 1 && jQuery( '#slides .slide' ).length > 0 ) {		
+					jQuery('#slides').slides({
+						container: 'slides_container',
+						preload: true,
+						preloadImage: 'https://www.bitbot.com.au/wp-content/themes/coffeebreak/images/loading.png',
+									
+						autoHeight: true,
+												effect: 'slide',
+									
+						hoverPause: true,
+																		play: 10000,
+									
+						slideSpeed: 600,
+						fadeSpeed: 600,
+						crossfade: false,
+						generateNextPrev: false,
+						generatePagination: false
+					});
+				} else {
+					jQuery( '#slides .slides_container' ).fadeIn();
+				}
+				
+			});
+		//-->!]]>
+		</script><link rel="icon" href="https://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3-150x150.jpg" sizes="32x32"><link rel="icon" href="https://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg" sizes="192x192"><link rel="apple-touch-icon" href="https://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg"><meta name="msapplication-TileImage" content="https://www.bitbot.com.au/wp-content/uploads/2010/02/IMG_4276-3.jpg"></head><body class="page-template-default page page-id-794 page-child parent-pageid-299 unknown alt-style-chrome">
+
+<div id="wrap">
+    <div id="top">
+    	<div class="content">
+        
+            <div id="header">
+            
+            	<div id="logo">
+            
+				                    <a href="https://www.bitbot.com.au" title="Tailored computer systems to streamline your business">
+                        <img class="logo" src="https://www.bitbot.com.au/wp-content/uploads/2020/04/Wordpress-Try-2-1.png" alt="BitBot Software"></a>
+                 
+                
+                                    <span class="site-title"><a href="https://www.bitbot.com.au">BitBot Software</a></span>
+                                    <span class="site-description">Tailored computer systems to streamline your business</span>
+                    
+                </div>
+             
+                <div id="nav">
+                    <ul id="menu-bitbot" class="menu"><li id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-500"><a href="/">Home</a></li>
+<li id="menu-item-515" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-515"><a href="https://www.bitbot.com.au/topics/articles/">Articles</a>
+<ul class="sub-menu"><li id="menu-item-516" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-516"><a href="https://www.bitbot.com.au/topics/articles/bitbot-news/">BitBot News</a></li>
+	<li id="menu-item-517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-517"><a href="https://www.bitbot.com.au/topics/articles/open-source/">Open-Source</a></li>
+	<li id="menu-item-518" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-518"><a href="https://www.bitbot.com.au/topics/articles/programming/">Programming</a></li>
+	<li id="menu-item-519" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-519"><a href="https://www.bitbot.com.au/topics/articles/servers/">Servers</a></li>
+</ul></li>
+<li id="menu-item-501" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-501"><a href="https://www.bitbot.com.au/services/">Services</a>
+<ul class="sub-menu"><li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-502"><a href="https://www.bitbot.com.au/services/consulting/">Consulting</a>
+	<ul class="sub-menu"><li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="https://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
+	</ul></li>
+	<li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-504"><a href="https://www.bitbot.com.au/services/server-and-network-support/">Server and Network Support</a>
+	<ul class="sub-menu"><li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="https://www.bitbot.com.au/services/server-and-network-support/managed-services/">Managed Services</a></li>
+		<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="https://www.bitbot.com.au/services/server-and-network-support/technical-information/">Technical Information</a></li>
+	</ul></li>
+	<li id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-507"><a href="https://www.bitbot.com.au/services/software-development/">Software Development</a>
+	<ul class="sub-menu"><li id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-508"><a href="https://www.bitbot.com.au/services/software-development/portfolio/">Software Portfolio</a></li>
+		<li id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509"><a href="https://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
+	</ul></li>
+</ul></li>
+<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="https://www.bitbot.com.au/about/">About Us</a>
+<ul class="sub-menu"><li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
+	<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-723"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
+</ul></li>
+<li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
+</ul></div>
+                
+                                                
+            </div>
+            
+        </div>
+    </div>
+       
+	<div id="featured">
+        <div id="page-title" class="content">
+            <h1 class="page">Momentum Energy Privacy Policy</h1>
+        </div>
+    </div>
+           
+    
+	<div id="main-content" class="page">           
+    <div class="content">
+		<div class="col-left">
+			<div id="main">
+            
+                                                                                                
+                
+                <div class="post wrap">
+                    
+                    
+<p id="block-ff272ebf-0c49-448d-9015-3d9a60d1350f">Effective date: 13 January 2022</p>
+
+
+
+<p id="block-e49fe3eb-c78f-4cbd-bdcf-13ff15bd1a89">BitBot Software Pty Ltd (“us”, “we”, or “our”) operates the website and the <a href="https://play.google.com/store/apps/details?id=au.com.bitbot.banksia">Momentum Energy Dashboard</a> mobile application (the “Service”).</p>
+
+
+
+<p id="block-8cb22a38-3655-4e0b-8aee-77bccd058b4e">This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
+
+
+
+<p id="block-38e6a245-7612-45b0-9824-7a817dc45e28">We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.</p>
+
+
+
+<h2 id="block-3a1d2d5f-51a4-49d9-bfb5-e811f4fd6df2">Information Collection And Use</h2>
+
+
+
+<p id="block-8b3d1feb-83c5-4299-9a50-0a02745623c3">We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+
+
+
+<h3 id="block-266e776d-cbcf-4e86-bb92-0889e6f1a7c5">Types of Data Collected</h3>
+
+
+
+<h4 id="block-def1c5aa-9118-453d-a8b1-efc8cd9a49ae">Personal Data</h4>
+
+
+
+<p id="block-3c699f55-4710-4be2-a3fb-d8f1b97d892c">While using our Service, the software may provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to:</p>
+
+
+
+<ul id="block-05c856af-0c8c-4745-bcd1-2e4179265a65"><li>Cookies and Usage Data</li><li>Android Advertising ID</li><li>Google account</li><li>eBay (and other merchants) account</li><li>Your shopping history and preferences</li></ul><h4 id="block-cda1b64e-f403-4609-8e6d-38460d3fc4ca">Usage Data</h4>
+
+
+
+<p id="block-d9f38b59-642d-446e-b4a8-0d471f605dc5">We may also collect information that your device sends whenever you visit our Service or when you access the Service by or through a mobile device (“Usage Data”).</p>
+
+
+
+<p id="block-27c236b4-bb12-4759-b254-454f60d699c7">This Usage Data may include information such as your computer’s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+
+
+<p id="block-93c2f5e0-1124-4d17-b7ba-33db6154195e">When you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.</p>
+
+
+
+<h4 id="block-6279409b-5b22-4235-a133-4619a78e1ab9">Tracking & Cookies Data</h4>
+
+
+
+<p id="block-1057c0b8-9246-44f6-b3ac-3e123387b275">We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.</p>
+
+
+
+<p id="block-53de32ba-f347-4624-bc45-5a7804e995aa">Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
+
+
+
+<p id="block-172c1379-5517-4b48-8360-c70ccc228313">You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+
+
+
+<p id="block-f8db1e55-2dbe-4e8a-8a50-321620180a6e">Examples of Cookies we use:</p>
+
+
+
+<ul id="block-a9921d5c-848b-47dc-953f-f1933a71e184"><li><strong>Session Cookies.</strong> We use Session Cookies to operate our Service.</li><li><strong>Preference Cookies.</strong> We use Preference Cookies to remember your preferences and various settings.</li><li><strong>Security Cookies.</strong> We use Security Cookies for security purposes.</li></ul><h2 id="block-fdd299ee-5192-436d-a043-bc6c565b4e93">Use of Data</h2>
+
+
+
+<p id="block-24c57115-3064-4dca-96c8-fc945d55a48d">BitBot Software Pty Ltd uses the collected data for various purposes:</p>
+
+
+
+<ul id="block-ae9d8cb9-f112-405e-bc5c-468ec3f1c529"><li>To provide and maintain the Service</li><li>To notify you about changes to our Service</li><li>To allow you to participate in interactive features of our Service when you choose to do so</li><li>To provide customer care and support</li><li>To provide analysis or valuable information so that we can improve the Service</li><li>To monitor the usage of the Service</li><li>To detect, prevent and address technical issues</li><li>To personalise your shopping experience and recommend items you might like to purchase</li></ul><h2 id="block-f887689e-4a45-4b34-bd7b-3cdc1779cc06">Transfer Of Data</h2>
+
+
+
+<p id="block-7e1bfe6a-d7a6-4e39-8cf2-bf46bc1345e5">Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.</p>
+
+
+
+<p id="block-b939a256-9bd8-4f03-9d09-7daba7be8894">If you are located outside Australia and choose to provide information to us, please note that we transfer the data, including Personal Data, to the United States and/or Australia and process it there.</p>
+
+
+
+<p id="block-49fe27c1-5c6a-4c8f-b12d-4461320cc996">Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+
+
+
+<p id="block-06a8c3f4-5da5-4478-b048-39ceefc0d988">BitBot Software Pty Ltd will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.</p>
+
+
+
+<h2 id="block-91931d94-012e-4b49-86af-6767da7b6356">Disclosure Of Data</h2>
+
+
+
+<h3 id="block-013a7be9-2379-47f9-8bcc-c4f0f082f122">Legal Requirements</h3>
+
+
+
+<p id="block-04fe4bfa-acd7-462f-8a45-1f8ff074dbba">BitBot Software Pty Ltd may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+
+
+
+<ul id="block-eeed1535-8210-469a-aa2d-35361a4b0ac7"><li>To comply with a legal obligation</li><li>To protect and defend the rights or property of BitBot Software Pty Ltd</li><li>To prevent or investigate possible wrongdoing in connection with the Service</li><li>To protect the personal safety of users of the Service or the public</li><li>To protect against legal liability</li></ul><h3 id="block-a4aad3f8-0ad1-40ab-a478-7ca92e79c162">Commercial Products</h3>
+
+
+
+<p id="block-29a7fe2d-08bd-4acb-ab91-c6842f775e07">BitBot Software Pty Ltd may disclose your Personal Data to its clients and commercial partners, although we will make efforts to anonymize the data.</p>
+
+
+
+<h2 id="block-fee32042-7201-45ca-81a5-97902c5e40f5">Security Of Data</h2>
+
+
+
+<p id="block-940d549c-2464-4d36-b286-e72f7c912ae7">The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+
+
+
+<h2 id="block-2d77259c-b82c-4c69-8583-2636bae9d0d7">Service Providers</h2>
+
+
+
+<p id="block-dd6563f4-b76e-4b90-b83f-360bdf0168c3">We may employ third party companies and individuals to facilitate our Service (“Service Providers”), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.</p>
+
+
+
+<p id="block-c08959c6-40ee-47e5-9424-6460ec3cffa7">These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+
+
+
+<h3 id="block-03e219ff-1cfc-4f92-8ee5-327874bf64b8">Analytics</h3>
+
+
+
+<p id="block-5985c1eb-6a3c-4e91-8dbb-47573e8933e9">We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
+
+
+
+<ul id="block-5cf70435-9896-44d1-aaa3-c5de1a88dceb"><li><strong>Google Analytics</strong> Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network. For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></li><li><strong>Firebase</strong> Firebase is analytics service provided by Google Inc. You may opt-out of certain Firebase features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a> We also encourage you to review the Google’s policy for safeguarding your data: <a href="https://support.google.com/analytics/answer/6004245">https://support.google.com/analytics/answer/6004245</a>. For more information on what type of information Firebase collects, please visit please visit the Google Privacy & Terms web page: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></li></ul><h2 id="block-df31f73a-8adb-41c7-9e19-667d9e853abe">Links To Other Sites</h2>
+
+
+
+<p id="block-0d277f02-f532-4e33-b591-e9ab46c3e869">Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+
+
+
+<p id="block-de9ff420-ec67-4afd-9168-7284d8b6b07f">We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+
+
+
+<h2 id="block-00f67b40-f745-4f6f-ab85-e22c0e7c0aa9">Children’s Privacy</h2>
+
+
+
+<p id="block-5dd58dc5-46b9-42da-b00e-7344bbe3d024">Our Service does not address anyone under the age of 18 (“Children”).</p>
+
+
+
+<p id="block-017e76be-34a7-4a07-b394-71dde00b030d">We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+
+
+
+<h2 id="block-1d979569-1c3b-4d04-a361-c3361841103c">Changes To This Privacy Policy</h2>
+
+
+
+<p id="block-01f8c02b-7334-464c-b959-c26b80ba34ba">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+
+
+<p id="block-e9e94a89-0455-40cb-abd3-c7cde4cafaa9">We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the “effective date” at the top of this Privacy Policy.</p>
+
+
+
+<p id="block-8657ca8c-afa3-4d31-8462-07f4dc2005c9">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+
+
+<h2 id="block-1ab2648a-f1d9-4d88-8dd9-c638a0048906">Contact Us</h2>
+
+
+
+<p id="block-a9975cf8-2678-48ca-b5f4-084b7ddab1ea">If you have any questions about this Privacy Policy, please contact us:</p>
+
+
+
+<ul id="block-4c680153-d212-4832-804c-fc7949ce3120"><li>By email: <a href="mailto:bitbot@bitbot.com.au">bitbot@bitbot.com.au</a></li></ul><p id="block-1bfc8155-c70f-488f-a995-1fd9ab333570">?</p>
+                    
+					
+                </div>
+                
+                                                    
+			  
+        
+            </div>
+        </div>
+
+        
+<div id="sidebar" class="col-right">
+
+		
+	<div id="pages-3" class="block widget widget_pages"><h3>Pages</h3>
+			<ul><li class="page_item page-item-130 page_item_has_children current_page_ancestor"><a href="https://www.bitbot.com.au/services/">Services</a>
+<ul class="children"><li class="page_item page-item-28 page_item_has_children"><a href="https://www.bitbot.com.au/services/consulting/">Consulting</a>
+	<ul class="children"><li class="page_item page-item-212"><a href="https://www.bitbot.com.au/services/consulting/computer-network-security-audits/">Computer Security Audits</a></li>
+	</ul></li>
+	<li class="page_item page-item-14 page_item_has_children"><a href="https://www.bitbot.com.au/services/server-and-network-support/">Server and Network Support</a>
+	<ul class="children"><li class="page_item page-item-280"><a href="https://www.bitbot.com.au/services/server-and-network-support/managed-services/">Managed Services</a></li>
+		<li class="page_item page-item-274"><a href="https://www.bitbot.com.au/services/server-and-network-support/technical-information/">Technical Information</a></li>
+	</ul></li>
+	<li class="page_item page-item-16 page_item_has_children current_page_ancestor"><a href="https://www.bitbot.com.au/services/software-development/">Software Development</a>
+	<ul class="children"><li class="page_item page-item-299 page_item_has_children current_page_ancestor current_page_parent"><a href="https://www.bitbot.com.au/services/software-development/portfolio/">Software Portfolio</a>
+		<ul class="children"><li class="page_item page-item-639"><a href="https://www.bitbot.com.au/services/software-development/portfolio/aus-phone-towers-privacy-policy/">Aus Phone Towers Privacy Policy</a></li>
+			<li class="page_item page-item-794 current_page_item"><a href="https://www.bitbot.com.au/services/software-development/portfolio/momentum-energy-privacy-policy/" aria-current="page">Momentum Energy Privacy Policy</a></li>
+			<li class="page_item page-item-791"><a href="https://www.bitbot.com.au/services/software-development/portfolio/nuptial-flight-privacy-policy/">Nuptial Flight Privacy Policy</a></li>
+			<li class="page_item page-item-783"><a href="https://www.bitbot.com.au/services/software-development/portfolio/banksia-privacy-policy/">Banksia Privacy Policy</a></li>
+		</ul></li>
+		<li class="page_item page-item-291"><a href="https://www.bitbot.com.au/services/software-development/technical-information/">Technical Information</a></li>
+	</ul></li>
+</ul></li>
+<li class="page_item page-item-2 page_item_has_children"><a href="https://www.bitbot.com.au/about/">About Us</a>
+<ul class="children"><li class="page_item page-item-23"><a href="https://www.bitbot.com.au/about/employee-profiles/">Employee Profiles</a></li>
+	<li class="page_item page-item-20"><a href="https://www.bitbot.com.au/about/positions-available/">Positions Available</a></li>
+	<li class="page_item page-item-722"><a href="https://www.bitbot.com.au/about/privacy-policy/">Privacy Policy</a></li>
+</ul></li>
+<li class="page_item page-item-30"><a href="https://www.bitbot.com.au/contact-us/">Contact Us</a></li>
+			</ul></div>
+		<div id="recent-posts-2" class="block widget widget_recent_entries">
+		<h3>Recent Posts</h3>
+		<ul><li>
+					<a href="https://www.bitbot.com.au/2010/03/free-hosted-redmine-project-mangement/">Free Hosted Redmine Project Management</a>
+									</li>
+											<li>
+					<a href="https://www.bitbot.com.au/2010/03/make-the-move/">Make The Move!</a>
+									</li>
+											<li>
+					<a href="https://www.bitbot.com.au/2010/03/benchmarking-openssl/">Benchmarking OpenSSL on Linux, FreeBSD and Windows</a>
+									</li>
+											<li>
+					<a href="https://www.bitbot.com.au/2010/03/benchmarking-linux-and-freebsd/">Benchmarking Linux and FreeBSD</a>
+									</li>
+											<li>
+					<a href="https://www.bitbot.com.au/2010/02/software-freedom/">Software Freedom</a>
+									</li>
+											<li>
+					<a href="https://www.bitbot.com.au/2010/01/welcome-to-the-new-bitbot-com-au-website/">Welcome to BitBot.com.au!</a>
+									</li>
+					</ul></div><div id="custom_html-2" class="widget_text block widget widget_custom_html"><h3>Professional Engineers</h3><div class="textwidget custom-html-widget"><div style="text-align: center"><a href="/about/employee-profiles/"><img src="https://www.bitbot.com.au/wp-content/uploads/2010/03/EA_ProfEngineer_Member_RGB.jpg" alt="Engineers Australia Member"></a></div></div></div>		           
+	
+</div>
+
+	</div>
+    </div>
+		
+	<div class="fix"></div>
+
+	
+	<div id="footer">
+        <div class="content">
+            <div class="col-left">
+            	<h3></h3>
+                <p>Phone: 0403 825 367<br>
+Email: sales@bitbot.com.au<br></p>
+                <div class="hr"></div>
+                <p>© 2022 BitBot Software. (ABN: 78 131 407 193)<br>
+This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/au/">Creative Commons Attribution-Share Alike 2.5 Australia License</a>.</p>
+                
+            </div>
+            <div class="col-right">
+            	<h3></h3>
+                <p>We are a new, innovative company based in Newcastle NSW Australia. We pride ourselves on being able to expertly meet our customers' needs. We constantly strive to be the best in our local industry. Our services are affordable and contain no hidden costs. We commit ourselves to excellence.</p>
+            </div>
+        </div>
+        <div class="fix"></div>
+	</div>
+	
+	
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12687515-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body></html>
